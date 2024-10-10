@@ -1,0 +1,67 @@
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/j0Cnav31vCC
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
+import Link from "next/link"
+
+export default function Component() {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+      <div className="space-y-4 w-full max-w-md">
+        <div className="space-y-2 text-center">
+          <h2 className="text-2xl font-bold">Seu objetivo é manter o peso!</h2>
+          <p>Aqui está o seu treino personalizado:</p>
+        </div>
+        <div className="bg-white rounded-lg shadow-md p-4 space-y-4">
+          <div>
+            <h3 className="text-lg font-bold mb-2">TREINO A</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>Flexão de braços 3 x 6</li>
+              <li>Agachamento 3 x 15</li>
+              <li>Panturrilhas 2 x 20</li>
+              <li>Prancha isométrica 4 x 30s</li>
+              <li>Polichinelo com braço lateral 4 x 15</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold mb-2">TREINO B</h3>
+            <ul className="space-y-2 text-gray-600">
+              <li>Polichinelo frontal 3 x 15</li>
+              <li>Abdominal completo 3 x 15/20</li>
+              <li>Tríceps 3 x 15</li>
+              <li>Skipping 4 x 10</li>
+              <li>Burpee 3 x 30/60s</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="space-y-4 w-full max-w-md mt-8">
+        <Link
+          href="#"
+          className="inline-flex items-center justify-center w-full bg-gray-200 text-black rounded-full py-3 px-6 transition-colors hover:bg-gray-300"
+          prefetch={false}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 mr-2"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+          </svg>
+        </Link>
+      </div>
+      <img
+        src="/placeholder.svg"
+        alt="Fitness illustration"
+        className="w-32 h-32 mb-8"
+        width="200"
+        height="200"
+        style={{ aspectRatio: "200/200", objectFit: "cover" }}
+      />
+    </div>
+  )
+}

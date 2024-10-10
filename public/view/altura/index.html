@@ -1,83 +1,80 @@
-<!--
-// v0 by Vercel.
-// https://v0.dev/t/zyPHgkTJbJc
--->
+/**
+ * v0 by Vercel.
+ * @see https://v0.dev/t/q4hFGYyAA43
+ * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
+ */
+import { Button } from "@/components/ui/button"
 
-<style style="">
-    :root {
-        --background: 210 100% 97%;
-        --foreground: 339 20% 20%;
-        --primary: 308 56% 85%;
-        --primary-foreground: 210 22% 22%;
-        --secondary: 196 75% 88%;
-        --secondary-foreground: 210 22% 22%;
-        --accent: 211 86% 70%;
-        --accent-foreground: 210 22% 22%;
-        --destructive: 0 93% 73%;
-        --destructive-foreground: 210 22% 22%;
-        --muted: 210 100% 95%;
-        --muted-foreground: 210 22% 22%;
-        --card: 210 100% 97%;
-        --card-foreground: 210 22% 22%;
-        --popover: 0 0% 100%;
-        --popover-foreground: 341 20% 22%;
-        --border: 210 40% 80%;
-        --input: 210 40% 56%;
-        --ring: 210 40% 60%;
-        --chart-1: 308 56% 85%;
-        --chart-2: 211 96% 70%;
-        --chart-3: 45 100% 80%;
-        --chart-4: 180 60% 85%;
-        --chart-5: 120 50% 80%;
-        --radius: 1rem;
-    }
-
-    img[src="/placeholder.svg"],
-    img[src="/placeholder-user.jpg"] {
-        filter: sepia(.3) hue-rotate(150deg) saturate(.5) opacity(0.8)
-    }
-</style>
-<style style="">
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: 'Manrope', sans-serif;
-        --font-sans-serif: 'Manrope';
-    }
-</style>
-<style style="">
-    body {
-        font-family: 'Manrope', sans-serif;
-        --font-sans-serif: 'Manrope';
-    }
-</style>
-<div class="flex flex-col items-center justify-center min-h-screen p-4">
-    <div class="space-y-4 w-full max-w-md">
-        <div class="space-y-2 text-center">
-            <p>Quantos quilos você está pesando?</p>
+export default function Component() {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+      <div className="space-y-4 w-full max-w-md">
+        <div className="space-y-2 text-center">
+          <p>Qual é a sua altura em centímetros?</p>
         </div>
-    </div><img src="/placeholder.svg" alt="Fitness illustration" class="w-32 h-32 mb-8" width="200" height="200"
-        style="aspect-ratio: 200 / 200; object-fit: cover;" />
-    <div class="space-y-4 w-full max-w-md">
-        <div class="flex items-center justify-between"><button
-                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="w-4 h-4">
-                    <path d="M5 12h14"></path>
-                </svg></button><span class="text-2xl font-bold">75 kg</span><button
-                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="w-4 h-4">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5v14"></path>
-                </svg></button></div>
+      </div>
+      <img
+        src="/placeholder.svg"
+        alt="Fitness illustration"
+        className="w-32 h-32 mb-8"
+        width="200"
+        height="200"
+        style={{ aspectRatio: "200/200", objectFit: "cover" }}
+      />
+      <div className="space-y-4 w-full max-w-md">
+        <div className="flex items-center justify-between">
+          <Button variant="ghost" size="icon">
+            <MinusIcon className="w-4 h-4" />
+          </Button>
+          <span className="text-2xl font-bold">175 cm</span>
+          <Button variant="ghost" size="icon">
+            <PlusIcon className="w-4 h-4" />
+          </Button>
+        </div>
+      </div>
+      <div className="space-y-4 w-full max-w-md mt-8">
+        <Button className="w-full bg-gray-200 text-black rounded-full">Continuar</Button>
+      </div>
     </div>
-    <div class="space-y-4 w-full max-w-md mt-8"><button
-            class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-10 px-4 py-2 w-full bg-gray-200 text-black rounded-full">Continuar</button>
-    </div>
-</div>
+  )
+}
+
+function MinusIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M5 12h14" />
+    </svg>
+  )
+}
+
+
+function PlusIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M5 12h14" />
+      <path d="M12 5v14" />
+    </svg>
+  )
+}
