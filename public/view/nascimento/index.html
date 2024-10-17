@@ -1,37 +1,40 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/Nw0PGEVbt31
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
 
-export default function Component() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4">
-      <div className="space-y-4 w-full max-w-md">
-        <div className="space-y-2 text-center">
+  <!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>ALWAYSACTIVE</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+		<link href="../css/styles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body> 
+    <div class="flex flex-col items-center justify-center min-h-screen p-4">
+      <div class="space-y-4 w-full max-w-md">
+        <div class="space-y-2 text-center">
           <p>E sua data de nascimento?</p>
           <p>Informe sua data de nascimento:</p>
         </div>
-        <div className="flex items-center justify-center">
+        <div class="flex items-center justify-center">
           <Input
             type="date"
-            className="w-full rounded-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full rounded-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
       </div>
-      <div className="space-y-4 w-full max-w-md mt-8">
-        <Button className="w-full bg-gray-200 text-black rounded-full">Continuar</Button>
+      <div class="space-y-4 w-full max-w-md mt-8">
+        <Button class="w-full bg-gray-200 text-black rounded-full">Continuar</Button>
       </div>
       <img
         src="/placeholder.svg"
         alt="Fitness illustration"
-        className="w-32 h-32 mb-8"
+        class="w-32 h-32 mb-8"
         width="200"
         height="200"
-        style={{ aspectRatio: "200/200", objectFit: "cover" }}
+        
       />
     </div>
-  )
-}
+  
+
+</div>
+</body>
+</html>
